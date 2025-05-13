@@ -1,51 +1,39 @@
+/* Grundstil */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background: #f4f4f4;
-    color: #333;
+    background-color: #0d0d0d; /* tiefschwarz */
+    color: #f0f0f0;
 }
 
+/* Kopfbereich */
 header {
-    background: #2c3e50;
-    color: white;
-    padding: 1em 0;
+    background: #1a1a1a;
+    color: #d4af37; /* Gold */
+    padding: 2em 0;
     text-align: center;
+    border-bottom: 2px solid #004d40; /* Dunkelgrün */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+nav {
+    margin-top: 10px;
 }
 
 nav a {
-    margin: 0 15px;
-    color: #fff;
+    margin: 0 20px;
+    color: #d4af37;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-#hero {
-    background: #3498db;
-    color: white;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.service-card {
-    background: white;
-    margin: 20px 0;
-    padding: 20px;
-    border-left: 5px solid #3498db;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-footer {
-    background: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
-}
+nav a:hover {
+    color
