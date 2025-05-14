@@ -1,37 +1,36 @@
-// Scroll-Animationen aktivieren
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, {
-  threshold: 0.1
+// Scroll-Animationen mit AOS (statt eigener IntersectionObserver)
+document.addEventListener("DOMContentLoaded", () => {
+  if (typeof AOS !== "undefined") {
+    AOS.init({
+      duration: 800,
+      once: true,  // Animation nur beim ersten Scrollen
+      easing: "ease-in-out",
+    });
+  }
 });
 
-document.querySelectorAll('.fade-in').forEach(el => {
-  observer.observe(el);
+// Hamburger-Menü Toggle für Mobilgeräte
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+menuToggle?.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  menuToggle.classList.toggle("open");
 });
 
-// Hamburger-Menü Toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav');
+// Cookie-Banner-Verwaltung
+window.addEventListener("load", () => {
+  const banner = document.getElementById("cookie-banner");
+  const acceptBtn = document.getElementById("accept-cookies");
 
-menuToggle.addEventListener('click', () => {
-  nav.classList.toggle('active');
-});
+  if (!banner || !acceptBtn) return;
 
-// Cookie-Banner
-window.addEventListener('load', () => {
-  const banner = document.getElementById('cookie-banner');
-  const acceptBtn = document.getElementById('accept-cookies');
-
-  if (!localStorage.getItem('cookiesAccepted')) {
-    banner.style.display = 'block';
+  if (!localStorage.getItem("cookiesAccepted")) {
+    banner.style.display = "block";
   }
 
-  acceptBtn.addEventListener('click', () => {
-    localStorage.setItem('cookiesAccepted', 'true');
-    banner.style.display = 'none';
+  acceptBtn.addEventListener("click", () => {
+    localStorage.setItem("cookiesAccepted", "true");
+    banner.style.display = "none";
   });
 });
