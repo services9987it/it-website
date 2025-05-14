@@ -15,6 +15,18 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <!-- Scripts -->
+  <script>
+  window.addEventListener('load', () => {
+    if (window.location.hash === '#services') {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        history.replaceState(null, null, ' ');
+      }, 10);
+    }
+  });
+</script>
+<input type="hidden" name="_next" value="https://services9987it.github.io/it-website/" />
+
   <script defer src="script.js"></script>
   <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
