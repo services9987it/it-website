@@ -110,5 +110,16 @@
   <script>
     AOS.init();
   </script>
+  <script>
+  window.addEventListener('load', () => {
+    if (window.location.hash && window.location.hash === '#services') {
+      // Scroll stattdessen zum Seitenanfang
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        history.replaceState(null, null, ' ');
+      }, 10); // kleine Verzögerung
+    }
+  });
+</script>
 </body>
 </html>
