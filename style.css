@@ -1,113 +1,157 @@
-/* Grundstil */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #0d0d0d; /* tiefschwarz */
-    color: #f0f0f0;
+:root {
+  --bg-dark: #121212;
+  --text-light: #f0f0f0;
+  --accent-green: #00b894;
+  --accent-gold: #d4af37;
+  --gray-card: #1e1e1e;
+  --font-main: 'Inter', sans-serif;
 }
 
-/* Kopfbereich */
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
 header {
-    background: #1a1a1a;
-    color: #d4af37; /* Gold */
-    padding: 2em 0;
-    text-align: center;
-    border-bottom: 2px solid #004d40; /* Dunkelgrün */
+  background: #1b1b1b;
+  text-align: center;
+  padding: 3em 1em 2em;
+  border-bottom: 1px solid #2a2a2a;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    letter-spacing: 1px;
+  font-size: 2.8em;
+  margin: 0;
+  color: var(--accent-gold);
+}
+
+header p {
+  color: #aaa;
+  margin-top: 0.5em;
+  font-size: 1.1em;
 }
 
 nav {
-    margin-top: 10px;
+  margin-top: 1.5em;
 }
 
 nav a {
-    margin: 0 20px;
-    color: #d4af37;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
+  color: var(--accent-gold);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #00b894; /* leuchtendes Grün */
+  color: var(--accent-green);
 }
 
-/* Hero-Bereich */
-#hero {
-    background: linear-gradient(145deg, #004d40, #0d0d0d);
-    color: #ffffff;
-    padding: 80px 20px;
-    text-align: center;
-    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.5);
-}
-
-#hero h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-#hero p {
-    font-size: 1.2em;
-    color: #ccc;
-}
-
-/* Sektionen */
 section {
-    padding: 60px 20px;
-    max-width: 1100px;
-    margin: auto;
+  max-width: 1100px;
+  margin: auto;
+  padding: 4em 1.5em;
 }
 
-/* Service-Karten */
+section h2 {
+  color: var(--accent-gold);
+  font-size: 2em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid #2a2a2a;
+  padding-bottom: 0.4em;
+}
+
 .service-card {
-    background: #1a1a1a;
-    margin: 25px 0;
-    padding: 30px;
-    border-left: 5px solid #d4af37;
-    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.1);
-    transition: transform 0.3s ease;
-    border-radius: 8px;
+  background: var(--gray-card);
+  border-left: 4px solid var(--accent-gold);
+  padding: 2em;
+  margin-bottom: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+  transform: scale(1.01);
+  box-shadow: 0 6px 18px rgba(0, 184, 148, 0.2);
 }
 
 .service-card h3 {
-    color: #d4af37;
-    margin-bottom: 10px;
+  margin-top: 0;
+  color: var(--accent-gold);
 }
 
 .service-card p {
-    color: #ccc;
-}
-
-/* Über uns & Kontakt */
-#about p, #contact p {
-    font-size: 1.1em;
-    color: #ddd;
+  color: #ccc;
+  margin-bottom: 0;
 }
 
 a {
-    color: #d4af37;
-    text-decoration: underline;
+  color: var(--accent-green);
+  text-decoration: underline;
 }
 
-/* Footer */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  margin-top: 2em;
+}
+
+form input,
+form textarea {
+  padding: 1em;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  color: #fff;
+  font-size: 1em;
+  border-radius: 6px;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+button {
+  background: var(--accent-gold);
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 0.8em 1.2em;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-green);
+  color: #fff;
+}
+
 footer {
-    background: #1a1a1a;
-    color: #888;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-    font-size: 0.9em;
-    border-top: 1px solid #004d40;
+  text-align: center;
+  background: #1b1b1b;
+  color: #888;
+  padding: 2em 1em;
+  font-size: 0.9em;
+  border-top: 1px solid #2a2a2a;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .service-card {
+    padding: 1.5em;
+  }
 }
