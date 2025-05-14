@@ -40,14 +40,14 @@ nav {
 }
 
 nav a {
-  color: #d4af37;
+  color: #00b894; /* Links auf sanftes Türkis geändert */
   text-decoration: none;
   margin: 0 15px;
   font-weight: 600;
 }
 
 nav a:hover {
-  color: #00b894;
+  color: #d4af37; /* Hover-Farbe geändert */
 }
 
 .menu-toggle {
@@ -213,7 +213,7 @@ footer {
 }
 
 .profile-pic {
-    width: 180px;
+    width: 120px; /* Bildgröße angepasst */
     height: auto;
     border-radius: 12px;
     margin-top: 20px;
