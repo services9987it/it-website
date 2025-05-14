@@ -6,61 +6,138 @@
   <meta name="description" content="Mohammad Ismail IT Services - Web Development, Hosting, and IT Security since 2022." />
   <title>Mohammad Ismail IT Services</title>
   <style>
+    /* Grundstil */
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      line-height: 1.6;
+      background-color: #0d0d0d;
+      color: #f0f0f0;
     }
-    header, footer {
-      background-color: #222;
-      color: #fff;
-      padding: 1em 2em;
+
+    header {
+      background: #1a1a1a;
+      color: #d4af37;
+      padding: 2em 0;
       text-align: center;
+      border-bottom: 2px solid #004d40;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
     nav a {
-      color: #fff;
-      margin: 0 10px;
+      margin: 0 20px;
+      color: #d4af37;
       text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
     }
+
+    nav a:hover {
+      color: #00b894;
+    }
+
     section {
-      padding: 2em;
-      max-width: 900px;
+      padding: 60px 20px;
+      max-width: 1100px;
       margin: auto;
-      background: #fff;
-      margin-bottom: 1em;
-      border-radius: 10px;
     }
-    h1, h2 {
-      color: #333;
+
+    /* Service-Karten */
+    .service-card {
+      background: #1a1a1a;
+      margin: 25px 0;
+      padding: 30px;
+      border-left: 5px solid #d4af37;
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.1);
+      transition: transform 0.3s ease;
+      border-radius: 8px;
     }
-    ul {
-      list-style: none;
-      padding-left: 0;
+
+    .service-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
     }
-    ul li {
-      margin-bottom: 0.5em;
+
+    .service-card h3 {
+      color: #d4af37;
+      margin-bottom: 10px;
     }
+
+    .service-card p {
+      color: #ccc;
+    }
+
+    #about p, #contact p {
+      font-size: 1.1em;
+      color: #ddd;
+    }
+
+    a {
+      color: #d4af37;
+      text-decoration: underline;
+    }
+
     form {
       display: flex;
       flex-direction: column;
+      gap: 1em;
+      margin-top: 2em;
     }
+
+    form label {
+      font-weight: bold;
+      color: #d4af37;
+    }
+
     form input, form textarea {
-      margin-bottom: 1em;
-      padding: 0.5em;
+      padding: 1em;
       font-size: 1em;
-    }
-    button {
-      background-color: #333;
-      color: #fff;
-      padding: 0.7em;
       border: none;
-      cursor: pointer;
+      border-radius: 5px;
+      background: #333;
+      color: #fff;
+      width: 100%;
     }
+
+    form textarea {
+      height: 150px;
+      resize: vertical;
+    }
+
+    button {
+      background-color: #d4af37;
+      color: #000;
+      padding: 0.8em;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
     button:hover {
-      background-color: #555;
+      background-color: #00b894;
+      color: #fff;
+    }
+
+    footer {
+      background: #1a1a1a;
+      color: #888;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      font-size: 0.9em;
+      border-top: 1px solid #004d40;
     }
   </style>
 </head>
@@ -78,45 +155,64 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Hello! I'm <strong>Mohammad Ismail</strong>, an IT professional with experience in web development, hosting, and security since 2022. I specialize in creating custom, secure, and scalable solutions for individuals and businesses.</p>
+    <p>Hello! I'm <strong>Mohammad Ismail</strong>, an IT professional with expertise in web development, hosting, email solutions, and cybersecurity. Since 2022, I've been helping clients build reliable and secure digital platforms tailored to their needs.</p>
   </section>
 
   <section id="services">
     <h2>My Services</h2>
-    <ul>
-      <li><strong>🌐 Web Hosting & Domains:</strong> Fast and secure hosting solutions with custom domain options.</li>
-      <li><strong>☁️ Cloud & Server Solutions:</strong> Scalable virtual private servers and secure infrastructure setup.</li>
-      <li><strong>💻 Web Development:</strong> Responsive, SEO-friendly, and modern website design using HTML/CSS/JS.</li>
-      <li><strong>📧 Business Email:</strong> Custom email addresses, spam protection, backups, and privacy compliance.</li>
-      <li><strong>🔒 IT Security Consulting:</strong> Firewalls, penetration testing, and security audits for your systems.</li>
-    </ul>
+
+    <div class="service-card">
+      <h3>🌐 Web Hosting & Domains</h3>
+      <p>I offer lightning-fast and secure hosting, including domain registration, SSL setup, and DNS configuration for individuals and businesses.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>☁️ Cloud & Server Solutions</h3>
+      <p>Setup and management of VPS or cloud infrastructure, server hardening, monitoring, and backup solutions for maximum uptime and security.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>💻 Web Development</h3>
+      <p>From landing pages to full websites, I design and develop responsive, SEO-optimized, and user-friendly web applications using modern technologies like HTML5, CSS3, and JavaScript.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>📧 Business Email Services</h3>
+      <p>Create professional email addresses with custom domains, plus setup of spam filtering, backups, encryption, and privacy-focused email solutions.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>🔒 IT Security Consulting</h3>
+      <p>Offering vulnerability assessments, firewall setup, endpoint protection, and penetration testing to ensure your systems are secure against modern threats.</p>
+    </div>
+
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>If you would like to work with me or have any questions, feel free to reach out:</p>
+    <p>If you’d like to work with me or ask any questions, feel free to get in touch:</p>
     <p>📧 Email: <a href="mailto:mohammad.ismail.it98@gmail.com">mohammad.ismail.it98@gmail.com</a></p>
     <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/mohammad-ismail-61b695229" target="_blank">Mohammad Ismail</a></p>
 
     <h3>Send me a message</h3>
-    <form
-  action="https://formspree.io/f/xnndoevy"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
+    <form action="https://formspree.io/f/xnndoevy" method="POST">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
     <p><small>* Your data will be kept confidential and used only for communication purposes.</small></p>
   </section>
 
+  <footer>
+    <p>&copy; 2025 Mohammad Ismail | All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
