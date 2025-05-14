@@ -5,253 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Mohammad Ismail IT Services - Web Development, Hosting, and IT Security since 2022." />
   <title>Mohammad Ismail IT Services</title>
-
-  <!-- AOS CSS for scroll animations -->
- <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg-dark: #121212;
-    --text-light: #f0f0f0;
-    --accent-green: #00b894;
-    --accent-gold: #d4af37;
-    --gray-card: #1e1e1e;
-    --font-main: 'Inter', sans-serif;
-  }
-
-  body {
-    margin: 0;
-    font-family: var(--font-main);
-    background-color: var(--bg-dark);
-    color: var(--text-light);
-    line-height: 1.7;
-  }
-
-  header {
-    background: #1b1b1b;
-    text-align: center;
-    padding: 3em 1em 2em;
-    border-bottom: 1px solid #2a2a2a;
-  }
-
-  header h1 {
-    font-size: 2.8em;
-    margin: 0;
-    color: var(--accent-gold);
-  }
-
-  header p {
-    color: #aaa;
-    margin-top: 0.5em;
-    font-size: 1.1em;
-  }
-
-  nav {
-    margin-top: 1.5em;
-  }
-
-  nav a {
-    color: var(--accent-gold);
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 600;
-    transition: color 0.3s;
-  }
-
-  nav a:hover {
-    color: var(--accent-green);
-  }
-
-  section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 4em 1.5em;
-  }
-
-  section h2 {
-    color: var(--accent-gold);
-    font-size: 2em;
-    margin-bottom: 1em;
-    border-bottom: 2px solid #2a2a2a;
-    padding-bottom: 0.4em;
-  }
-
-  .service-card {
-    background: var(--gray-card);
-    border-left: 4px solid var(--accent-gold);
-    padding: 2em;
-    margin-bottom: 2em;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .service-card:hover {
-    transform: scale(1.01);
-    box-shadow: 0 6px 18px rgba(0, 184, 148, 0.2);
-  }
-
-  .service-card h3 {
-    margin-top: 0;
-    color: var(--accent-gold);
-  }
-
-  .service-card p {
-    color: #ccc;
-    margin-bottom: 0;
-  }
-
-  a {
-    color: var(--accent-green);
-    text-decoration: underline;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2em;
-    margin-top: 2em;
-  }
-
-  form input, form textarea {
-    padding: 1em;
-    background: #2a2a2a;
-    border: 1px solid #444;
-    color: #fff;
-    font-size: 1em;
-    border-radius: 6px;
-  }
-
-  form textarea {
-    resize: vertical;
-    min-height: 150px;
-  }
-
-  button {
-    background: var(--accent-gold);
-    color: #000;
-    font-weight: bold;
-    border: none;
-    padding: 0.8em 1.2em;
-    border-radius: 6px;
-    transition: background 0.3s ease;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background: var(--accent-green);
-    color: #fff;
-  }
-
-  footer {
-    text-align: center;
-    background: #1b1b1b;
-    color: #888;
-    padding: 2em 1em;
-    font-size: 0.9em;
-    border-top: 1px solid #2a2a2a;
-  }
-
-  @media (max-width: 768px) {
-    header h1 {
-      font-size: 2em;
-    }
-
-    nav a {
-      display: block;
-      margin: 10px 0;
-    }
-
-    .service-card {
-      padding: 1.5em;
-    }
-  }
-</style>
-
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <header>
     <h1>Mohammad Ismail IT Services</h1>
     <p>Providing Web & IT Solutions since 2022</p>
-    <button id="menu-toggle">&#9776;</button>
-    <nav id="main-nav">
+    <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section id="about" data-aos="fade-up">
+  <section id="about">
     <h2>About Me</h2>
-    <p>Hello! I'm <strong>Mohammad Ismail</strong>, an IT professional with expertise in web development, hosting, email services, and cybersecurity. Since 2022, I’ve provided tailored digital solutions that are both secure and scalable.</p>
+    <p>Hello! I'm <strong>Mohammad Ismail</strong>, an IT professional with experience in web development, hosting, and security since 2022. I specialize in creating custom, secure, and scalable solutions for individuals and businesses.</p>
   </section>
 
   <section id="services">
-    <h2 data-aos="fade-up">My Services</h2>
+    <h2>My Services</h2>
 
-    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+    <div class="service-card">
       <h3>🌐 Web Hosting & Domains</h3>
-      <p>I offer fast and secure hosting, domain registration, and SSL configuration tailored to individual or business needs.</p>
+      <p>Fast and secure hosting with domain registration, DNS management, SSL certificates, and uptime monitoring.</p>
     </div>
 
-    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+    <div class="service-card">
       <h3>☁️ Cloud & Server Solutions</h3>
-      <p>Customized VPS and cloud environments, including server setup, backups, and monitoring for reliable performance.</p>
+      <p>Setup and manage virtual private servers (VPS), cloud infrastructure with backups, and Linux/Windows server administration.</p>
     </div>
 
-    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+    <div class="service-card">
       <h3>💻 Web Development</h3>
-      <p>Modern websites using HTML, CSS, and JavaScript — responsive, SEO-friendly, and easy to maintain.</p>
+      <p>Responsive websites with modern design, built using HTML, CSS, JavaScript – optimized for performance and SEO.</p>
     </div>
 
-    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-      <h3>📧 Business Email Services</h3>
-      <p>Professional email with custom domains, including spam filtering, encryption, and GDPR compliance.</p>
+    <div class="service-card">
+      <h3>📧 Business Email</h3>
+      <p>Custom email setup with spam protection, backup policies, and integration with business tools like Outlook or Gmail.</p>
     </div>
 
-    <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+    <div class="service-card">
       <h3>🔒 IT Security Consulting</h3>
-      <p>Comprehensive security audits, firewall implementation, and penetration testing to protect your digital assets.</p>
+      <p>Penetration testing, firewall setup, system hardening, and audits to protect your infrastructure.</p>
     </div>
-
   </section>
 
-  <section id="contact" data-aos="fade-up">
+  <section id="contact">
     <h2>Contact Me</h2>
+    <p>If you would like to work with me or have any questions, feel free to reach out:</p>
     <p>📧 Email: <a href="mailto:mohammad.ismail.it98@gmail.com">mohammad.ismail.it98@gmail.com</a></p>
     <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/mohammad-ismail-61b695229" target="_blank">Mohammad Ismail</a></p>
 
     <h3>Send me a message</h3>
     <form action="https://formspree.io/f/xnndoevy" method="POST">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name" required />
-
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required />
-
-      <label for="message">Your Message</label>
-      <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
-
+      <label>
+        Your name:
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        Your email:
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        Your message:
+        <textarea name="message" required></textarea>
+      </label>
       <button type="submit">Send</button>
     </form>
     <p><small>* Your data will be kept confidential and used only for communication purposes.</small></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Mohammad Ismail | All rights reserved.</p>
+    &copy; 2025 Mohammad Ismail. All rights reserved.
   </footer>
-
-  <!-- AOS JavaScript for scroll animation -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    const menuToggle = document.getElementById("menu-toggle");
-    const nav = document.getElementById("main-nav");
-    menuToggle.addEventListener("click", () => {
-      nav.classList.toggle("active");
-    });
-  </script>
 
 </body>
 </html>
