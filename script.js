@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (typeof AOS !== "undefined") {
     AOS.init({
       duration: 800,
-      once: true,  // Animation nur beim ersten Scrollen
+      once: false,  // Animation nur beim ersten Scrollen
       easing: "ease-in-out",
     });
   }
