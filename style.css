@@ -1,157 +1,213 @@
-:root {
-  --bg-dark: #121212;
-  --text-light: #f0f0f0;
-  --accent-green: #00b894;
-  --accent-gold: #d4af37;
-  --gray-card: #1e1e1e;
-  --font-main: 'Inter', sans-serif;
-}
-
+/* Grundlayout */
 body {
+  font-family: 'Inter', sans-serif;
   margin: 0;
-  font-family: var(--font-main);
-  background-color: var(--bg-dark);
-  color: var(--text-light);
-  line-height: 1.7;
+  padding: 0;
+  background: url('https://www.transparenttextures.com/patterns/cubes.png'), #0d0d0d;
+  color: #f0f0f0;
+  line-height: 1.6;
 }
 
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Header */
 header {
-  background: #1b1b1b;
+  background-color: #1a1a1a;
+  padding: 1.5em 0;
   text-align: center;
-  padding: 3em 1em 2em;
-  border-bottom: 1px solid #2a2a2a;
+  border-bottom: 2px solid #004d40;
+  position: relative;
 }
 
 header h1 {
-  font-size: 2.8em;
   margin: 0;
-  color: var(--accent-gold);
+  font-size: 2.5em;
+  color: #d4af37;
 }
 
-header p {
+.subtitle {
   color: #aaa;
-  margin-top: 0.5em;
+  margin-top: 0.2em;
   font-size: 1.1em;
 }
 
 nav {
-  margin-top: 1.5em;
+  margin-top: 1em;
 }
 
 nav a {
-  color: var(--accent-gold);
+  color: #d4af37;
   text-decoration: none;
   margin: 0 15px;
   font-weight: 600;
-  transition: color 0.3s;
 }
 
 nav a:hover {
-  color: var(--accent-green);
+  color: #00b894;
 }
 
-section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 4em 1.5em;
-}
-
-section h2 {
-  color: var(--accent-gold);
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
   font-size: 2em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid #2a2a2a;
-  padding-bottom: 0.4em;
+  color: #d4af37;
+  position: absolute;
+  top: 1.5em;
+  right: 1em;
 }
 
+/* Sektionen */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  color: #d4af37;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+/* Services */
 .service-card {
-  background: var(--gray-card);
-  border-left: 4px solid var(--accent-gold);
-  padding: 2em;
-  margin-bottom: 2em;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #1a1a1a;
+  margin: 25px 0;
+  padding: 30px;
+  border-left: 5px solid #d4af37;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.1);
+  transition: transform 0.3s ease;
+  border-radius: 8px;
 }
 
 .service-card:hover {
-  transform: scale(1.01);
-  box-shadow: 0 6px 18px rgba(0, 184, 148, 0.2);
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
 }
 
 .service-card h3 {
-  margin-top: 0;
-  color: var(--accent-gold);
+  color: #d4af37;
+  margin-bottom: 10px;
 }
 
 .service-card p {
   color: #ccc;
-  margin-bottom: 0;
 }
 
-a {
-  color: var(--accent-green);
-  text-decoration: underline;
-}
-
+/* Formular */
 form {
   display: flex;
   flex-direction: column;
-  gap: 1.2em;
-  margin-top: 2em;
+  gap: 1em;
 }
 
-form input,
-form textarea {
-  padding: 1em;
-  background: #2a2a2a;
-  border: 1px solid #444;
-  color: #fff;
+input, textarea {
+  padding: 12px;
   font-size: 1em;
   border-radius: 6px;
+  border: none;
+  background-color: #333;
+  color: #f0f0f0;
 }
 
-form textarea {
+textarea {
+  min-height: 120px;
   resize: vertical;
-  min-height: 150px;
 }
 
-button {
-  background: var(--accent-gold);
-  color: #000;
+button[type="submit"] {
+  background-color: #d4af37;
+  color: #0d0d0d;
   font-weight: bold;
   border: none;
-  padding: 0.8em 1.2em;
+  padding: 12px;
   border-radius: 6px;
+  cursor: pointer;
   transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #00b894;
+}
+
+/* Footer */
+footer {
+  background: #1a1a1a;
+  color: #888;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  border-top: 1px solid #004d40;
+}
+
+/* Cookie-Banner */
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(26, 26, 26, 0.95);
+  color: #f0f0f0;
+  text-align: center;
+  padding: 1em;
+  display: none;
+  z-index: 1000;
+}
+
+#cookie-banner button {
+  margin-left: 1em;
+  background: #00b894;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-button:hover {
-  background: var(--accent-green);
-  color: #fff;
+/* Fade-In Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
 }
 
-footer {
-  text-align: center;
-  background: #1b1b1b;
-  color: #888;
-  padding: 2em 1em;
-  font-size: 0.9em;
-  border-top: 1px solid #2a2a2a;
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
+/* Mobile */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2em;
+  nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: #1a1a1a;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    padding: 1em 0;
   }
 
-  nav a {
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
     display: block;
-    margin: 10px 0;
   }
+}
 
-  .service-card {
-    padding: 1.5em;
-  }
+/* Hintergrundbild-Overlay */
+.background-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url('https://cdn.pixabay.com/photo/2017/06/07/03/31/cyber-2387080_1280.jpg') no-repeat center center / cover;
+  opacity: 0.05;
 }
