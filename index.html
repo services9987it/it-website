@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Mohammad Ismail IT Services - Web Development, Hosting, and IT Security since 2022." />
   <title>Mohammad Ismail IT Services</title>
+
+  <!-- AOS CSS for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
   <style>
     /* Grundstil */
     body {
@@ -19,14 +23,15 @@
     header {
       background: #1a1a1a;
       color: #d4af37;
-      padding: 2em 0;
+      padding: 2em 1em;
       text-align: center;
       border-bottom: 2px solid #004d40;
+      position: relative;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 2.2em;
       letter-spacing: 1px;
     }
 
@@ -35,7 +40,7 @@
     }
 
     nav a {
-      margin: 0 20px;
+      margin: 0 15px;
       color: #d4af37;
       text-decoration: none;
       font-weight: 600;
@@ -46,13 +51,45 @@
       color: #00b894;
     }
 
+    #menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #d4af37;
+      font-size: 1.5em;
+      position: absolute;
+      top: 1.2em;
+      right: 1em;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #1a1a1a;
+        margin-top: 1em;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+
+      #menu-toggle {
+        display: block;
+      }
+    }
+
     section {
       padding: 60px 20px;
       max-width: 1100px;
       margin: auto;
     }
 
-    /* Service-Karten */
     .service-card {
       background: #1a1a1a;
       margin: 25px 0;
@@ -146,51 +183,51 @@
   <header>
     <h1>Mohammad Ismail IT Services</h1>
     <p>Providing Web & IT Solutions since 2022</p>
-    <nav>
+    <button id="menu-toggle">&#9776;</button>
+    <nav id="main-nav">
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section id="about">
+  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
-    <p>Hello! I'm <strong>Mohammad Ismail</strong>, an IT professional with expertise in web development, hosting, email solutions, and cybersecurity. Since 2022, I've been helping clients build reliable and secure digital platforms tailored to their needs.</p>
+    <p>Hello! I'm <strong>Mohammad Ismail</strong>, an IT professional with expertise in web development, hosting, email services, and cybersecurity. Since 2022, I’ve provided tailored digital solutions that are both secure and scalable.</p>
   </section>
 
   <section id="services">
-    <h2>My Services</h2>
+    <h2 data-aos="fade-up">My Services</h2>
 
-    <div class="service-card">
+    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
       <h3>🌐 Web Hosting & Domains</h3>
-      <p>I offer lightning-fast and secure hosting, including domain registration, SSL setup, and DNS configuration for individuals and businesses.</p>
+      <p>I offer fast and secure hosting, domain registration, and SSL configuration tailored to individual or business needs.</p>
     </div>
 
-    <div class="service-card">
+    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
       <h3>☁️ Cloud & Server Solutions</h3>
-      <p>Setup and management of VPS or cloud infrastructure, server hardening, monitoring, and backup solutions for maximum uptime and security.</p>
+      <p>Customized VPS and cloud environments, including server setup, backups, and monitoring for reliable performance.</p>
     </div>
 
-    <div class="service-card">
+    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
       <h3>💻 Web Development</h3>
-      <p>From landing pages to full websites, I design and develop responsive, SEO-optimized, and user-friendly web applications using modern technologies like HTML5, CSS3, and JavaScript.</p>
+      <p>Modern websites using HTML, CSS, and JavaScript — responsive, SEO-friendly, and easy to maintain.</p>
     </div>
 
-    <div class="service-card">
+    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
       <h3>📧 Business Email Services</h3>
-      <p>Create professional email addresses with custom domains, plus setup of spam filtering, backups, encryption, and privacy-focused email solutions.</p>
+      <p>Professional email with custom domains, including spam filtering, encryption, and GDPR compliance.</p>
     </div>
 
-    <div class="service-card">
+    <div class="service-card" data-aos="fade-up" data-aos-delay="500">
       <h3>🔒 IT Security Consulting</h3>
-      <p>Offering vulnerability assessments, firewall setup, endpoint protection, and penetration testing to ensure your systems are secure against modern threats.</p>
+      <p>Comprehensive security audits, firewall implementation, and penetration testing to protect your digital assets.</p>
     </div>
 
   </section>
 
-  <section id="contact">
+  <section id="contact" data-aos="fade-up">
     <h2>Contact Me</h2>
-    <p>If you’d like to work with me or ask any questions, feel free to get in touch:</p>
     <p>📧 Email: <a href="mailto:mohammad.ismail.it98@gmail.com">mohammad.ismail.it98@gmail.com</a></p>
     <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/mohammad-ismail-61b695229" target="_blank">Mohammad Ismail</a></p>
 
@@ -213,6 +250,17 @@
   <footer>
     <p>&copy; 2025 Mohammad Ismail | All rights reserved.</p>
   </footer>
+
+  <!-- AOS JavaScript for scroll animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("main-nav");
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  </script>
 
 </body>
 </html>
