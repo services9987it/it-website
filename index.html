@@ -5,93 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Mohammad Ismail IT Services - Web Development, Hosting, and IT Security since 2022." />
   <title>Mohammad Ismail IT Services</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
 
   <header>
-    <div class="container">
-      <h1>Mohammad Ismail</h1>
-      <p class="subtitle">Professional IT Services Since 2022</p>
-      <div class="menu-toggle">☰</div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+    <h1>Mohammad Ismail</h1>
+    <p>Professional IT Services – Web & IT Solutions since 2022</p>
+    <!-- Profilbild -->
+    <img src="me.JPG" alt="Mohammad Ismail Portrait" class="profile-pic" />
+    <nav class="navbar">
+      <div class="menu-toggle" id="menu-toggle">
+        ☰
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="hero">
-    <h2>Empowering Your IT Infrastructure</h2>
-    <p>Secure. Reliable. Professional.</p>
-  </section>
-
-  <section id="about" class="fade-in">
+  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
-    <p>Hello! I'm <strong>Mohammad Ismail</strong>, an experienced IT specialist with expertise in web development, hosting, cloud solutions, and security. I help individuals and businesses build efficient and secure digital infrastructures.</p>
+    <p>Hello! I'm <strong>Mohammad Ismail</strong>, an IT specialist with expertise in web development, hosting, and IT security since 2022. I develop secure, reliable, and scalable solutions for individuals and businesses.</p>
   </section>
 
-  <section id="services" class="fade-in">
+  <section id="services" data-aos="fade-up">
     <h2>My Services</h2>
-
     <div class="service-card">
       <h3>🌐 Web Hosting & Domains</h3>
-      <p>Professional-grade hosting with custom domain setup, SSL certificates, uptime monitoring, and regular backups for your peace of mind.</p>
+      <p>Secure, high-speed web hosting and domain registration with uptime monitoring, SSL encryption, and custom email options.</p>
     </div>
-
     <div class="service-card">
       <h3>☁️ Cloud & Server Solutions</h3>
-      <p>Setup and maintenance of virtual private servers (VPS), cloud environments, and scalable hosting platforms tailored to your needs.</p>
+      <p>Deploy and manage scalable cloud servers, VPS, and dedicated environments tailored to your performance and security needs.</p>
     </div>
-
     <div class="service-card">
       <h3>💻 Web Development</h3>
-      <p>Responsive, fast, and SEO-optimized websites built using HTML, CSS, JavaScript, and modern frameworks tailored to your branding and functionality.</p>
+      <p>Modern, responsive websites using HTML5, CSS3, JavaScript, and frameworks – optimized for SEO and performance.</p>
     </div>
-
     <div class="service-card">
-      <h3>📧 Business Email Setup</h3>
-      <p>Custom domain-based email addresses, including setup, security (SPF, DKIM), spam filtering, and migration services.</p>
+      <h3>📧 Business Email Solutions</h3>
+      <p>Professional email setup, custom domains, secure mail servers, spam filtering, and full GDPR compliance.</p>
     </div>
-
     <div class="service-card">
       <h3>🔒 IT Security Consulting</h3>
-      <p>Threat assessment, penetration testing, firewall configuration, security policy auditing, and compliance consulting.</p>
+      <p>Risk assessments, firewall configurations, penetration testing, and strategic guidance to strengthen your systems against threats.</p>
     </div>
-
   </section>
 
-  <section id="contact" class="fade-in">
+  <section id="contact" data-aos="fade-up">
     <h2>Contact Me</h2>
+    <p>If you'd like to get in touch or start a project, feel free to reach out:</p>
     <p>📧 Email: <a href="mailto:mohammad.ismail.it98@gmail.com">mohammad.ismail.it98@gmail.com</a></p>
     <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/mohammad-ismail-61b695229" target="_blank">Mohammad Ismail</a></p>
 
     <h3>Send me a message</h3>
     <form action="https://formspree.io/f/xnndoevy" method="POST">
-      <label for="name">Your name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Your email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Your message:</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
-
+      <label>Your Name:
+        <input type="text" name="name" required>
+      </label>
+      <label>Your Email:
+        <input type="email" name="email" required>
+      </label>
+      <label>Your Message:
+        <textarea name="message" rows="6" required></textarea>
+      </label>
       <button type="submit">Send</button>
     </form>
-    <p><small>* Your data will be kept confidential and used only for communication purposes.</small></p>
+    <p><small>* Your data will remain confidential and only used for communication purposes.</small></p>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Mohammad Ismail. All rights reserved.</p>
-  </footer>
-
-  <!-- Cookie Banner -->
-  <div id="cookie-banner">
-    <p>This website uses cookies to ensure you get the best experience. <button id="accept-cookies">Got it!</button></p>
+  <!-- Cookie Hinweis -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>This website uses cookies to enhance the user experience. <button id="accept-cookies">Accept</button></p>
   </div>
 
-  <script src="script.js"></script>
+  <footer>
+    <p>© 2025 Mohammad Ismail IT Services – All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
