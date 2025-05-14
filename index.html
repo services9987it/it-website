@@ -1,88 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mohammad Ismail IT Services - Web Development, Hosting, and IT Security since 2022." />
-  <title>Mohammad Ismail IT Services</title>
+  <meta name="description" content="IT-Services von Mohammad Ismail – Webentwicklung, Hosting, Datenbanken und IT-Sicherheit." />
+  <title>Mohammad Ismail | IT-Services</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <div class="background-overlay"></div>
+
   <header>
-    <h1>Mohammad Ismail IT Services</h1>
-    <p>Providing Web & IT Solutions since 2022</p>
+    <h1>Mohammad Ismail</h1>
+    <p class="subtitle">Professionelle IT-Dienstleistungen seit 2022</p>
     <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+      <a href="#about">Über mich</a>
+      <a href="#services">Leistungen</a>
+      <a href="#contact">Kontakt</a>
     </nav>
   </header>
 
   <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm <strong>Mohammad Ismail</strong>, an IT professional with experience in web development, hosting, and security since 2022. I specialize in creating custom, secure, and scalable solutions for individuals and businesses.</p>
+    <h2>Über mich</h2>
+    <p>Ich bin <strong>Mohammad Ismail</strong>, IT-Spezialist seit 2022 mit Fokus auf Webentwicklung, Hosting, Datenbanksysteme und IT-Sicherheit. Ich helfe Unternehmen und Einzelpersonen bei der sicheren, effizienten und modernen Digitalisierung ihrer Prozesse.</p>
   </section>
 
   <section id="services">
-    <h2>My Services</h2>
+    <h2>Meine Leistungen</h2>
 
     <div class="service-card">
-      <h3>🌐 Web Hosting & Domains</h3>
-      <p>Fast and secure hosting with domain registration, DNS management, SSL certificates, and uptime monitoring.</p>
+      <h3>🌐 Webhosting & Domains</h3>
+      <p>Sichere und schnelle Hostinglösungen inklusive Domainregistrierung, SSL-Zertifikaten, E-Mail-Hosting und technischer Betreuung.</p>
+      <p><strong>Technologien:</strong> cPanel, Plesk, Apache, NGINX</p>
     </div>
 
     <div class="service-card">
-      <h3>☁️ Cloud & Server Solutions</h3>
-      <p>Setup and manage virtual private servers (VPS), cloud infrastructure with backups, and Linux/Windows server administration.</p>
+      <h3>☁️ Cloud- & Serverlösungen</h3>
+      <p>Individuelle Server-Setups (Linux/Windows), Virtualisierung, Backup-Konzepte und Cloud-Migration mit Fokus auf Verfügbarkeit & Sicherheit.</p>
+      <p><strong>Technologien:</strong> VPS, Docker, Azure, AWS</p>
     </div>
 
     <div class="service-card">
-      <h3>💻 Web Development</h3>
-      <p>Responsive websites with modern design, built using HTML, CSS, JavaScript – optimized for performance and SEO.</p>
+      <h3>💻 Webentwicklung</h3>
+      <p>Responsive Webseiten mit modernem Design und hoher Performance – maßgeschneidert für Ihr Business.</p>
+      <p><strong>Technologien:</strong> HTML5, CSS3, JavaScript, Bootstrap</p>
     </div>
 
     <div class="service-card">
-      <h3>📧 Business Email</h3>
-      <p>Custom email setup with spam protection, backup policies, and integration with business tools like Outlook or Gmail.</p>
+      <h3>📧 Business-E-Mail</h3>
+      <p>Einrichtung und Verwaltung von geschäftlichen E-Mails mit Spam-Schutz, Archivierung, Outlook/Google Workspace Integration.</p>
+      <p><strong>Technologien:</strong> IMAP, SPF/DKIM, Mailserver-Konfiguration</p>
     </div>
 
     <div class="service-card">
-      <h3>🔒 IT Security Consulting</h3>
-      <p>Penetration testing, firewall setup, system hardening, and audits to protect your infrastructure.</p>
+      <h3>🔒 IT-Sicherheit & Beratung</h3>
+      <p>Analyse, Beratung und Umsetzung von Sicherheitsmaßnahmen, Firewalls, Schwachstellen-Scans und Datenschutzkonformität (DSGVO).</p>
+      <p><strong>Technologien:</strong> UFW, Fail2Ban, Nessus, VPN, ISO27001</p>
     </div>
   </section>
 
   <section id="contact">
-    <h2>Contact Me</h2>
-    <p>If you would like to work with me or have any questions, feel free to reach out:</p>
-    <p>📧 Email: <a href="mailto:mohammad.ismail.it98@gmail.com">mohammad.ismail.it98@gmail.com</a></p>
-    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/mohammad-ismail-61b695229" target="_blank">Mohammad Ismail</a></p>
+    <h2>Kontakt</h2>
+    <p>Sie möchten mit mir arbeiten oder haben Fragen? Kontaktieren Sie mich gern:</p>
+    <p>📧 <a href="mailto:mohammad.ismail.it98@gmail.com">mohammad.ismail.it98@gmail.com</a></p>
+    <p>🔗 <a href="https://www.linkedin.com/in/mohammad-ismail-61b695229" target="_blank">LinkedIn-Profil ansehen</a></p>
 
-    <h3>Send me a message</h3>
+    <h3>Schreiben Sie mir direkt</h3>
     <form action="https://formspree.io/f/xnndoevy" method="POST">
       <label>
-        Your name:
+        Ihr Name:
         <input type="text" name="name" required />
       </label>
       <label>
-        Your email:
+        Ihre E-Mail:
         <input type="email" name="email" required />
       </label>
       <label>
-        Your message:
+        Ihre Nachricht:
         <textarea name="message" required></textarea>
       </label>
-      <button type="submit">Send</button>
+      <button type="submit">Nachricht senden</button>
     </form>
-    <p><small>* Your data will be kept confidential and used only for communication purposes.</small></p>
+    <p><small>* Ihre Daten werden vertraulich behandelt und nur zur Kontaktaufnahme verwendet.</small></p>
   </section>
 
   <footer>
-    &copy; 2025 Mohammad Ismail. All rights reserved.
+    &copy; 2025 Mohammad Ismail – IT-Services | Web • Server • Sicherheit
   </footer>
 
 </body>
 </html>
- 
