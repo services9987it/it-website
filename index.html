@@ -3,23 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mohammad Ismail IT Services - Web Development, Hosting, and IT Security since 2022." />
+  <meta name="description" content="Mohammad Ismail IT Services – Web Development, Hosting, and IT Security since 2022." />
+  <meta name="theme-color" content="#0d6efd" />
   <title>Mohammad Ismail IT Services</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Scripts -->
   <script defer src="script.js"></script>
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
 
   <header>
-    <h1>Mohammad Ismail</h1>
-    <p>Professional IT Services – Web & IT Solutions since 2022</p>
-    <!-- Profilbild -->
-    <img src="me.JPG" alt="Mohammad Ismail Portrait" class="profile-pic" />
-    <nav class="navbar">
-      <div class="menu-toggle" id="menu-toggle">
-        ☰
+    <div class="header-content">
+      <img src="me.JPG" alt="Portrait of Mohammad Ismail" class="profile-pic" />
+      <div>
+        <h1>Mohammad Ismail</h1>
+        <p>Professional IT Services – Web & IT Solutions since 2022</p>
       </div>
+    </div>
+
+    <nav class="navbar">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button>
       <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -27,85 +40,75 @@
     </nav>
   </header>
 
-  <!-- Section für Inhalte -->
-  <section id="home" class="fade-in">
-    <h2>Home</h2>
-    <p>Welcome to Our Website!
-We are thrilled to have you here. Our website is designed to offer you an exceptional experience, whether you are looking for valuable information, services, or products. With a user-friendly interface and top-notch content, we strive to make your visit informative, enjoyable, and effortless.
+  <main>
+    <section id="home" class="fade-in">
+      <h2>Home</h2>
+      <p>Welcome to Our Website! We're glad you're here. Browse through our offerings or get in touch for custom solutions tailored to your needs.</p>
+    </section>
 
-Explore our various sections to discover more about what we offer. If you have any questions or need assistance, don't hesitate to reach out. Our team is always here to help!
+    <section id="about" data-aos="fade-up">
+      <h2>About Me</h2>
+      <p><strong>Mohammad Ismail</strong> – IT Specialist since 2022, passionate about creating modern, secure web experiences. I specialize in custom development, cloud infrastructure, and IT security.</p>
+    </section>
 
-Thank you for visiting, and we hope you have a wonderful time exploring everything we have to offer.</p>
+    <section id="services" data-aos="fade-up">
+      <h2>My Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>🌐 Web Hosting & Domains</h3>
+          <p>Fast, secure hosting with domain setup, SSL, backups, and monitoring.</p>
+        </div>
+        <div class="service-card">
+          <h3>☁️ Cloud & Server Solutions</h3>
+          <p>Scale-ready servers (VPS, Dedicated, AWS/GCP) with full setup.</p>
+        </div>
+        <div class="service-card">
+          <h3>💻 Web Development</h3>
+          <p>Modern HTML5/CSS3/JS websites with SEO, responsiveness & performance in mind.</p>
+        </div>
+        <div class="service-card">
+          <h3>📧 Business Email</h3>
+          <p>GDPR-compliant secure email setups with spam protection.</p>
+        </div>
+        <div class="service-card">
+          <h3>🔒 IT Security Consulting</h3>
+          <p>Penetration tests, firewall configs, encryption strategies & training.</p>
+        </div>
+      </div>
+    </section>
 
-  </section>
-  <section id="about" data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>Hello! I'm <strong>Mohammad Ismail</strong>, and I'm an experienced IT specialist with a deep passion for web development, hosting, and IT security. With a career that began in 2022, I have since dedicated myself to creating innovative, secure, and scalable digital solutions for both individuals and businesses.
+    <section id="contact" data-aos="fade-up">
+      <h2>Contact Me</h2>
+      <p>📧 <a href="mailto:mohammad.ismail.it98@gmail.com">mohammad.ismail.it98@gmail.com</a><br />
+      🔗 <a href="https://www.linkedin.com/in/mohammad-ismail-61b695229" target="_blank" rel="noopener">LinkedIn Profile</a></p>
 
-In my journey as an IT professional, I have honed a strong skill set that allows me to develop robust websites, manage reliable hosting environments, and implement cutting-edge security protocols to protect sensitive data. I pride myself on providing tailored solutions that meet the unique needs of each client, ensuring that their digital infrastructure not only performs efficiently but also remains secure in today’s rapidly evolving technological landscape.
+      <h3>Send a Message</h3>
+      <form action="https://formspree.io/f/xnndoevy" method="POST">
+        <label for="name">Your Name:
+          <input type="text" id="name" name="name" required />
+        </label>
+        <label for="email">Your Email:
+          <input type="email" id="email" name="email" required />
+        </label>
+        <label for="message">Your Message:
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit">Send</button>
+      </form>
+      <p><small>* Your data remains confidential and is used only for communication purposes.</small></p>
+    </section>
+  </main>
 
-My goal is to help clients leverage technology to achieve their objectives with confidence. Whether it's building a custom website, setting up a secure hosting environment, or enhancing an existing system's security, I am committed to delivering high-quality results that exceed expectations.
-
-In addition to my technical expertise, I am constantly staying updated with the latest trends and best practices in the IT field to ensure that my solutions are at the forefront of innovation. My mission is to provide you with the best technology solutions to help you grow, protect your data, and drive success in an increasingly digital world..</p>
-  </section>
-
-  <section id="services" data-aos="fade-up">
-    <h2>My Services</h2>
-    <div class="service-card">
-      <h3>🌐 Web Hosting & Domains</h3>
-      <p>Secure, high-speed web hosting and domain registration with uptime monitoring, SSL encryption, and custom email options.</p>
-    </div>
-    <div class="service-card">
-      <h3>☁️ Cloud & Server Solutions</h3>
-      <p>Deploy and manage scalable cloud servers, VPS, and dedicated environments tailored to your performance and security needs.</p>
-    </div>
-    <div class="service-card">
-      <h3>💻 Web Development</h3>
-      <p>Modern, responsive websites using HTML5, CSS3, JavaScript, and frameworks – optimized for SEO and performance.</p>
-    </div>
-    <div class="service-card">
-      <h3>📧 Business Email Solutions</h3>
-      <p>Professional email setup, custom domains, secure mail servers, spam filtering, and full GDPR compliance.</p>
-    </div>
-    <div class="service-card">
-      <h3>🔒 IT Security Consulting</h3>
-      <p>Risk assessments, firewall configurations, penetration testing, and strategic guidance to strengthen your systems against threats.</p>
-    </div>
-  </section>
-
-  <section id="contact" data-aos="fade-up">
-    <h2>Contact Me</h2>
-    <p>If you'd like to get in touch or start a project, feel free to reach out:</p>
-    <p>📧 Email: <a href="mailto:mohammad.ismail.it98@gmail.com">mohammad.ismail.it98@gmail.com</a></p>
-    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/mohammad-ismail-61b695229" target="_blank">Mohammad Ismail</a></p>
-
-    <h3>Send me a message</h3>
-    <form action="https://formspree.io/f/xnndoevy" method="POST">
-      <label>Your Name:
-        <input type="text" name="name" required>
-      </label>
-      <label>Your Email:
-        <input type="email" name="email" required>
-      </label>
-      <label>Your Message:
-        <textarea name="message" rows="6" required></textarea>
-      </label>
-      <button type="submit">Send</button>
-    </form>
-    <p><small>* Your data will remain confidential and only used for communication purposes.</small></p>
-  </section>
-
-  <!-- Cookie Hinweis -->
-  <div id="cookie-banner" class="cookie-banner">
-    <p>This website uses cookies to enhance the user experience. <button id="accept-cookies">Accept</button></p>
+  <div id="cookie-banner" class="cookie-banner" role="alert">
+    <p>This website uses cookies to enhance your experience. <button id="accept-cookies">Accept</button></p>
   </div>
 
   <footer>
-    <p>© 2025 Mohammad Ismail IT Services – All rights reserved.</p>
+    <p>&copy; 2025 Mohammad Ismail IT Services – All rights reserved.</p>
   </footer>
-  
-  <!-- JavaScript -->
-  <script src="script.js"></script>
-  
+
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
