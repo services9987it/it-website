@@ -40,15 +40,16 @@ nav {
 }
 
 nav a {
-  color: #cccccc; /* Links auf professionellen Grauton geändert */
+  color: #d3d3d3; /* Professioneller Grauton */
   text-decoration: none;
   margin: 0 15px;
   font-weight: 600;
 }
 
 nav a:hover {
-  color: #d4af37; /* Hover-Farbe bleibt Gold */
+  color: #00b894; /* Bleibt Türkis, falls du den Hover-Effekt wünschst */
 }
+
 
 .menu-toggle {
   display: none;
@@ -213,11 +214,15 @@ footer {
 }
 
 .profile-pic {
-  width: 150px; /* Bildgröße angepasst */
+  width: 180px; /* Hier die Größe angepasst, also größer als zuvor */
   height: auto;
   border-radius: 12px;
   margin-top: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+html {
+  scroll-behavior: smooth; /* Mit smooth scrolling für flüssiges Scrollen */
 }
 
 html {
