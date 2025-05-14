@@ -35,22 +35,6 @@ header h1 {
   font-size: 1.1em;
 }
 
-nav {
-  margin-top: 1em;
-}
-
-nav a {
-  color: #d3d3d3; /* Professioneller Grauton */
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: 600;
-}
-
-nav a:hover {
-  color: #00b894; /* Bleibt Türkis, falls du den Hover-Effekt wünschst */
-}
-
-
 .menu-toggle {
   display: none;
   background: none;
@@ -213,18 +197,29 @@ footer {
   opacity: 0.05;
 }
 
+/* Profilbild größer */
 .profile-pic {
-  width: 180px; /* Hier die Größe angepasst, also größer als zuvor */
+  width: 180px; /* Hier die Größe angepasst */
   height: auto;
   border-radius: 12px;
   margin-top: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-html {
-  scroll-behavior: smooth; /* Mit smooth scrolling für flüssiges Scrollen */
+/* Links professioneller anpassen */
+nav a {
+  color: #d3d3d3; /* Professioneller Grauton */
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
 }
 
-html {
-  scroll-behavior: smooth; /* Smooth scroll für alle Links */
+nav a:hover {
+  color: #00b894; /* Bleibt Türkis für Hover */
 }
+
+/* Stelle sicher, dass die Seite oben beginnt */
+html {
+  scroll-behavior: smooth; /* Sanftes Scrollen für alle Links */
+}
+
