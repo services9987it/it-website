@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mohammad Ismail IT Services – Web Development, Hosting, and IT Security since 2022." />
-  <meta name="theme-color" content="#0d6efd" />
-  <title>Mohammad Ismail IT Services</title>
+  <meta name="description" content="Mo101IT Solutions – Innovative Web Development, Hosting & IT Services." />
+  <meta name="theme-color" content="#222831" />
+  <title>Mo101IT Solutions</title>
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -13,39 +13,20 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-  <!-- Scripts -->
-  <script>
-  window.addEventListener('load', () => {
-    if (window.location.hash === '#services') {
-      setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        history.replaceState(null, null, ' ');
-      }, 10);
-    }
-  });
-</script>
-<input type="hidden" name="_next" value="https://services9987it.github.io/it-website/" />
-
-  <script defer src="script.js"></script>
-  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
 
   <header>
-    <div class="header-content">
-      <img src="me.JPG" alt="Portrait of Mohammad Ismail" class="profile-pic" />
-      <div>
-        <h1>Mohammad Ismail</h1>
-        <p>Professional IT Services – Web & IT Solutions since 2022</p>
-      </div>
+    <div class="hero">
+      <h1>Mo101IT Solutions</h1>
+      <p>Digital solutions for businesses – modern, secure, and scalable</p>
+      <a href="#contact" class="cta-button">Get in Touch</a>
     </div>
 
     <nav class="navbar">
       <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button>
       <ul class="nav-links" id="nav-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -54,47 +35,40 @@
 
   <main>
     <section id="home" class="fade-in">
-      <h2>Home</h2>
-      <p>Welcome to Our Website! We're glad you're here. Browse through our offerings or get in touch for custom solutions tailored to your needs.</p>
-    </section>
-
-    <section id="about" data-aos="fade-up">
-      <h2>About Me</h2>
-      <p><strong>Mohammad Ismail</strong> – IT Specialist since 2022, passionate about creating modern, secure web experiences. I specialize in custom development, cloud infrastructure, and IT security.</p>
+      <h2>Welcome to Mo101IT Solutions</h2>
+      <p>We deliver custom IT solutions for businesses – from web development to secure cloud infrastructure.</p>
     </section>
 
     <section id="services" data-aos="fade-up">
-      <h2>My Services</h2>
+      <h2>Our Services</h2>
       <div class="services-grid">
         <div class="service-card">
-          <h3>🌐 Web Hosting & Domains</h3>
-          <p>Fast, secure hosting with domain setup, SSL, backups, and monitoring.</p>
+          <h3>🌐 Web Development</h3>
+          <p>Responsive, SEO-optimized websites with a focus on performance.</p>
         </div>
         <div class="service-card">
           <h3>☁️ Cloud & Server Solutions</h3>
-          <p>Scale-ready servers (VPS, Dedicated, AWS/GCP) with full setup.</p>
+          <p>Modern infrastructure using AWS, GCP, or your own servers.</p>
         </div>
         <div class="service-card">
-          <h3>💻 Web Development</h3>
-          <p>Modern HTML5/CSS3/JS websites with SEO, responsiveness & performance in mind.</p>
+          <h3>🔐 IT Security</h3>
+          <p>Security audits, firewalls, backups & GDPR-compliant processes.</p>
         </div>
         <div class="service-card">
-          <h3>📧 Business Email</h3>
-          <p>GDPR-compliant secure email setups with spam protection.</p>
+          <h3>📧 Email & Communication</h3>
+          <p>Secure email setups for businesses, including spam protection.</p>
         </div>
         <div class="service-card">
-          <h3>🔒 IT Security Consulting</h3>
-          <p>Penetration tests, firewall configs, encryption strategies & training.</p>
+          <h3>🛠️ Consulting & Support</h3>
+          <p>Technology consulting, maintenance, and personal customer support.</p>
         </div>
       </div>
     </section>
 
     <section id="contact" data-aos="fade-up">
-      <h2>Contact Me</h2>
-      <p>📧 <a href="mailto:mohammad.ismail.it98@gmail.com">mohammad.ismail.it98@gmail.com</a><br />
-      🔗 <a href="https://www.linkedin.com/in/mohammad-ismail-61b695229" target="_blank" rel="noopener">LinkedIn Profile</a></p>
+      <h2>Contact Us</h2>
+      <p>📧 <a href="mohammad.ismail.it98@gmail.com">mohammad.ismail.it98@gmail.com</a></p>
 
-      <h3>Send a Message</h3>
       <form action="https://formspree.io/f/xnndoevy" method="POST">
         <label for="name">Your Name:
           <input type="text" id="name" name="name" required />
@@ -107,31 +81,18 @@
         </label>
         <button type="submit">Send</button>
       </form>
-      <p><small>* Your data remains confidential and is used only for communication purposes.</small></p>
     </section>
   </main>
 
-  <div id="cookie-banner" class="cookie-banner" role="alert">
-    <p>This website uses cookies to enhance your experience. <button id="accept-cookies">Accept</button></p>
-  </div>
-
   <footer>
-    <p>&copy; 2025 Mohammad Ismail IT Services – All rights reserved.</p>
+    <p>&copy; 2025 Mo101IT Solutions – All rights reserved.</p>
   </footer>
 
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
   <script>
     AOS.init();
   </script>
-  <script>
-  window.addEventListener('load', () => {
-    if (window.location.hash && window.location.hash === '#services') {
-      // Scroll stattdessen zum Seitenanfang
-      setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        history.replaceState(null, null, ' ');
-      }, 10); // kleine Verzögerung
-    }
-  });
-</script>
 </body>
 </html>
