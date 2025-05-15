@@ -16,6 +16,8 @@
 </head>
 <body>
 
+  <div class="background-overlay"></div>
+
   <header>
     <div class="hero">
       <h1>Mo101IT Solutions</h1>
@@ -67,7 +69,7 @@
 
     <section id="contact" data-aos="fade-up">
       <h2>Contact Us</h2>
-      <p>📧 <a href="mohammad.ismail.it98@gmail.com">mohammad.ismail.it98@gmail.com</a></p>
+      <p>📧 <a href="mailto:mohammad.ismail.it98@gmail.com">mohammad.ismail.it98@gmail.com</a></p>
 
       <form action="https://formspree.io/f/xnndoevy" method="POST">
         <label for="name">Your Name:
@@ -88,11 +90,37 @@
     <p>&copy; 2025 Mo101IT Solutions – All rights reserved.</p>
   </footer>
 
+  <!-- Cookie Banner -->
+  <div id="cookie-banner">
+    <span>We use cookies to improve your experience. By using our site, you accept our <a href="#" style="color:#00b894; text-decoration:underline;">privacy policy</a>.</span>
+    <button id="accept-cookies">Accept</button>
+  </div>
+
   <!-- Scripts -->
   <script src="script.js" defer></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
   <script>
     AOS.init();
+
+    // Cookie-Banner Logik
+    document.addEventListener("DOMContentLoaded", function () {
+      const banner = document.getElementById("cookie-banner");
+      const acceptBtn = document.getElementById("accept-cookies");
+
+      if (!localStorage.getItem("cookiesAccepted")) {
+        banner.style.display = "block";
+      }
+
+      acceptBtn.addEventListener("click", function () {
+        localStorage.setItem("cookiesAccepted", "true");
+        banner.style.display = "none";
+      });
+    });
+
+    // Mobile Menü Toggle
+    document.getElementById("menu-toggle").addEventListener("click", () => {
+      document.getElementById("nav-links").classList.toggle("active");
+    });
   </script>
 </body>
 </html>
