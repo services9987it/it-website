@@ -3,11 +3,25 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background: url('https://cdn.pixabay.com/photo/2016/11/22/19/33/hacker-1851143_1280.jpg') no-repeat center center fixed, #0d0d0d;
-  background-size: cover;
+  background-color: #0d0d0d;
   color: #f0f0f0;
   line-height: 1.6;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
 }
+
+/* Hintergrundbild mit IT-Thema */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.85)),
+    url('https://cdn.pixabay.com/photo/2020/04/14/09/50/network-5049946_1280.jpg') no-repeat center center/cover;
+  opacity: 1;
+}
+
 
 .container {
   max-width: 1100px;
