@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mo101IT Solutions – Innovative Web Development, Hosting & IT Services." />
+  <meta name="description" content="NovaIT Solutions – Innovative Webentwicklung, Hosting & IT Services." />
   <meta name="theme-color" content="#222831" />
-  <title>Mo101IT Solutions</title>
+  <title>NovaIT Solutions</title>
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -16,111 +16,83 @@
 </head>
 <body>
 
-  <div class="background-overlay"></div>
-
   <header>
     <div class="hero">
-      <h1>Mo101IT Solutions</h1>
-      <p>Digital solutions for businesses – modern, secure, and scalable</p>
-      <a href="#contact" class="cta-button">Get in Touch</a>
+      <h1>NovaIT Solutions</h1>
+      <p>Digitale Lösungen für Unternehmen – modern, sicher und skalierbar</p>
+      <a href="#kontakt" class="cta-button">Jetzt kontaktieren</a>
     </div>
 
     <nav class="navbar">
-      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Navigation umschalten">☰</button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#start">Start</a></li>
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="home" class="fade-in">
-      <h2>Welcome to Mo101IT Solutions</h2>
-      <p>We deliver custom IT solutions for businesses – from web development to secure cloud infrastructure.</p>
+    <section id="start" class="fade-in">
+      <h2>Willkommen bei NovaIT Solutions</h2>
+      <p>Wir bieten maßgeschneiderte IT-Lösungen für Unternehmen – von Webentwicklung bis zur sicheren Cloud-Infrastruktur.</p>
     </section>
 
-    <section id="services" data-aos="fade-up">
-      <h2>Our Services</h2>
+    <section id="leistungen" data-aos="fade-up">
+      <h2>Unsere Leistungen</h2>
       <div class="services-grid">
         <div class="service-card">
-          <h3>🌐 Web Development</h3>
-          <p>Responsive, SEO-optimized websites with a focus on performance.</p>
+          <h3>🌐 Webentwicklung</h3>
+          <p>Responsives, SEO-optimiertes Webdesign mit Fokus auf Performance.</p>
         </div>
         <div class="service-card">
-          <h3>☁️ Cloud & Server Solutions</h3>
-          <p>Modern infrastructure using AWS, GCP, or your own servers.</p>
+          <h3>☁️ Cloud- & Serverlösungen</h3>
+          <p>Moderne Infrastruktur mit AWS, GCP oder eigenen Servern.</p>
         </div>
         <div class="service-card">
-          <h3>🔐 IT Security</h3>
-          <p>Security audits, firewalls, backups & GDPR-compliant processes.</p>
+          <h3>🔐 IT-Sicherheit</h3>
+          <p>Sicherheitsanalysen, Firewalls, Backups & DSGVO-konforme Prozesse.</p>
         </div>
         <div class="service-card">
-          <h3>📧 Email & Communication</h3>
-          <p>Secure email setups for businesses, including spam protection.</p>
+          <h3>📧 E-Mail & Kommunikation</h3>
+          <p>Sichere E-Mail-Setups für Geschäftskunden inkl. Spam-Schutz.</p>
         </div>
         <div class="service-card">
-          <h3>🛠️ Consulting & Support</h3>
-          <p>Technology consulting, maintenance, and personal customer support.</p>
+          <h3>🛠️ Beratung & Support</h3>
+          <p>Technologische Beratung, Wartung & persönlicher Kundensupport.</p>
         </div>
       </div>
     </section>
 
-    <section id="contact" data-aos="fade-up">
-      <h2>Contact Us</h2>
-      <p>📧 <a href="mailto:mohammad.ismail.it98@gmail.com">mohammad.ismail.it98@gmail.com</a></p>
+    <section id="kontakt" data-aos="fade-up">
+      <h2>Kontaktieren Sie uns</h2>
+      <p>📧 <a href="mailto:kontakt@novait-solutions.de">kontakt@novait-solutions.de</a></p>
 
       <form action="https://formspree.io/f/xnndoevy" method="POST">
-        <label for="name">Your Name:
+        <label for="name">Ihr Name:
           <input type="text" id="name" name="name" required />
         </label>
-        <label for="email">Your Email:
+        <label for="email">Ihre E-Mail:
           <input type="email" id="email" name="email" required />
         </label>
-        <label for="message">Your Message:
+        <label for="message">Ihre Nachricht:
           <textarea id="message" name="message" rows="5" required></textarea>
         </label>
-        <button type="submit">Send</button>
+        <button type="submit">Absenden</button>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Mo101IT Solutions – All rights reserved.</p>
+    <p>&copy; 2025 NovaIT Solutions – Alle Rechte vorbehalten.</p>
   </footer>
-
-  <!-- Cookie Banner -->
-  <div id="cookie-banner">
-    <span>We use cookies to improve your experience. By using our site, you accept our <a href="#" style="color:#00b894; text-decoration:underline;">privacy policy</a>.</span>
-    <button id="accept-cookies">Accept</button>
-  </div>
 
   <!-- Scripts -->
   <script src="script.js" defer></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
   <script>
     AOS.init();
-
-    // Cookie-Banner Logik
-    document.addEventListener("DOMContentLoaded", function () {
-      const banner = document.getElementById("cookie-banner");
-      const acceptBtn = document.getElementById("accept-cookies");
-
-      if (!localStorage.getItem("cookiesAccepted")) {
-        banner.style.display = "block";
-      }
-
-      acceptBtn.addEventListener("click", function () {
-        localStorage.setItem("cookiesAccepted", "true");
-        banner.style.display = "none";
-      });
-    });
-
-    // Mobile Menü Toggle
-    document.getElementById("menu-toggle").addEventListener("click", () => {
-      document.getElementById("nav-links").classList.toggle("active");
-    });
   </script>
 </body>
 </html>
