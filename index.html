@@ -17,70 +17,8 @@
   <!-- Scripts -->
   <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script defer src="script.js"></script>
-  <style>
-    :root {
-      --bg-color: #0d0d0d;
-      --text-color: #f0f0f0;
-    }
-
-    body.light-mode {
-      --bg-color: #f9f9f9;
-      --text-color: #222;
-    }
-
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-    }
-
-    .toggle-theme {
-      position: absolute;
-      top: 1em;
-      left: 1em;
-      background: #d4af37;
-      border: none;
-      padding: 0.5em 1em;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      margin-top: 1em;
-    }
-
-    .portfolio-item {
-      background: #1a1a1a;
-      padding: 20px;
-      border-left: 5px solid #00b894;
-      border-radius: 8px;
-    }
-
-    .testimonial {
-      background: #1a1a1a;
-      margin: 1em auto;
-      padding: 1em;
-      border-left: 5px solid #004d40;
-      max-width: 700px;
-      border-radius: 8px;
-    }
-
-    .testimonial p {
-      font-style: italic;
-    }
-
-    .testimonial strong {
-      display: block;
-      margin-top: 0.5em;
-      text-align: right;
-    }
-  </style>
 </head>
 <body>
-
-  <button class="toggle-theme" id="theme-toggle">Toggle Theme</button>
 
   <!-- Header -->
   <header>
@@ -99,8 +37,6 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -110,12 +46,17 @@
   <main>
     <section id="home" class="fade-in">
       <h2>Home</h2>
-      <p><strong>MO 101 Services</strong> is a dynamic IT service provider established in 2022...</p>
+      <p><strong>MO 101 Services</strong> is a dynamic IT service provider established in 2022, specializing in modern web development, cloud infrastructure, IT security, and digital transformation. 
+        Our team is driven by the mission to bring simplicity, speed, and security to your IT operations. 
+        <br><br>
+        We combine years of hands-on experience with the latest technologies to deliver exceptional value to our clients across industries. Our holistic approach ensures that your business is not only online, but also optimized, protected, and ready for the future.
+        <br><br>
+        At MO 101 Services, customer satisfaction is our top priority. We pride ourselves on transparent communication, flexible service models, and 24/7 technical support.</p>
     </section>
 
     <section id="about" data-aos="fade-up">
       <h2>About Me</h2>
-      <p><strong>Mohammad Ismail</strong> – IT Specialist since 2022...</p>
+      <p><strong>Mohammad Ismail</strong> – IT Specialist since 2022, passionate about creating modern, secure web experiences. I specialize in custom development, cloud infrastructure, and IT security.</p>
     </section>
 
     <section id="services" data-aos="fade-up">
@@ -125,44 +66,46 @@
           <h3>🌐 Web Hosting & Domains</h3>
           <p>Fast, secure hosting with domain setup, SSL, backups, and monitoring.</p>
         </div>
-        <!-- Weitere Service Cards... -->
-      </div>
-    </section>
-
-    <section id="portfolio" data-aos="fade-up">
-      <h2>Portfolio</h2>
-      <div class="portfolio-grid">
-        <div class="portfolio-item">
-          <h3>Client Website – Car Rental</h3>
-          <p>Developed full-stack responsive car rental website with booking engine.</p>
+        <div class="service-card">
+          <h3>☁️ Cloud & Server Solutions</h3>
+          <p>Scale-ready servers (VPS, Dedicated, AWS/GCP) with full setup.</p>
         </div>
-        <div class="portfolio-item">
-          <h3>Cloud Migration – Retail Company</h3>
-          <p>Migrated internal infrastructure to AWS with secure VPN and backup systems.</p>
+        <div class="service-card">
+          <h3>💻 Web Development</h3>
+          <p>Modern HTML5/CSS3/JS websites with SEO, responsiveness & performance in mind.</p>
         </div>
-      </div>
-    </section>
-
-    <section id="testimonials" data-aos="fade-up">
-      <h2>Testimonials</h2>
-      <div class="testimonial">
-        <p>"Mo 101 helped us launch our e-commerce site faster than expected and with zero bugs. Professional and reliable!"</p>
-        <strong>– A. Kaya, Startup Founder</strong>
-      </div>
-      <div class="testimonial">
-        <p>"Thanks to Mo 101, our data center is now fully secured. Great consulting services!"</p>
-        <strong>– T. Müller, IT Manager</strong>
+        <div class="service-card">
+          <h3>📧 Business Email</h3>
+          <p>GDPR-compliant secure email setups with spam protection.</p>
+        </div>
+        <div class="service-card">
+          <h3>🔒 IT Security Consulting</h3>
+          <p>Penetration tests, firewall configs, encryption strategies & training.</p>
+        </div>
       </div>
     </section>
 
     <section id="contact" data-aos="fade-up">
       <h2>Contact Me</h2>
+      <p>
+        📧 <a href="mailto:mohammad.ismail.it98@gmail.com">mohammad.ismail.it98@gmail.com</a><br />
+        🔗 <a href="https://www.linkedin.com/in/mohammad-ismail-61b695229" target="_blank" rel="noopener">LinkedIn Profile</a>
+      </p>
+
+      <h3>Send a Message</h3>
       <form action="https://formspree.io/f/xnndoevy" method="POST">
-        <label>Your Name: <input type="text" name="name" required></label>
-        <label>Your Email: <input type="email" name="email" required></label>
-        <label>Your Message: <textarea name="message" required></textarea></label>
+        <label for="name">Your Name:
+          <input type="text" id="name" name="name" required />
+        </label>
+        <label for="email">Your Email:
+          <input type="email" id="email" name="email" required />
+        </label>
+        <label for="message">Your Message:
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </label>
         <button type="submit">Send</button>
       </form>
+      <p><small>* Your data remains confidential and is used only for communication purposes.</small></p>
     </section>
   </main>
 
@@ -173,15 +116,21 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Mo 101 IT Services – All rights reserved.</p>
+    <p>&copy; 2025 Mo 101 IT Services  – All rights reserved.</p>
   </footer>
 
-  <!-- AOS & Theme Toggle Script -->
+  <!-- AOS & Smooth Scroll -->
   <script>
     AOS.init();
 
-    document.getElementById('theme-toggle').addEventListener('click', () => {
-      document.body.classList.toggle('light-mode');
+    // Scroll fix for deep link to #services
+    window.addEventListener('load', () => {
+      if (window.location.hash === '#services') {
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          history.replaceState(null, null, ' ');
+        }, 10);
+      }
     });
   </script>
 </body>
