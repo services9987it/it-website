@@ -3,25 +3,54 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #0d0d0d;
   color: #f0f0f0;
   line-height: 1.6;
   position: relative;
-  z-index: 1;
   overflow-x: hidden;
+  background-color: #0d0d0d;
+  z-index: 1;
 }
 
-/* Hintergrundbild mit IT-Thema */
+/* Animierter Netzwerk-Hintergrund mit SVG */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
-  z-index: -1;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.85)),
-    url('https://cdn.pixabay.com/photo/2020/04/14/09/50/network-5049946_1280.jpg') no-repeat center center/cover;
-  opacity: 1;
+  z-index: -2;
+  background: #0d0d0d;
+  pointer-events: none;
+  animation: networkMove 60s linear infinite;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.15) 2px, transparent 3px),
+    radial-gradient(circle at 80% 40%, rgba(212, 175, 55, 0.15) 2px, transparent 3px),
+    radial-gradient(circle at 50% 80%, rgba(212, 175, 55, 0.15) 2px, transparent 3px);
+  background-size: 100px 100px;
+  background-repeat: repeat;
 }
 
+/* Liniennetz als Overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(0deg, rgba(212,175,55,0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,175,55,0.1) 1px, transparent 1px);
+  background-size: 100px 100px;
+  animation: networkMove 120s linear infinite reverse;
+}
+
+/* Animation für das langsame Bewegen des Netzwerks */
+@keyframes networkMove {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 200px 200px, 150px 150px, 100px 100px;
+  }
+}
 
 .container {
   max-width: 1100px;
@@ -207,15 +236,15 @@ button[type="submit"]:hover {
   background-color: #00b894;
 }
 
-/* ========== Contact Links Farbe Gold ========== */
+/* ========== Kontakt Bereich Links goldene Farbe statt blau ========== */
 #contact a {
   color: #d4af37;
-  text-decoration: none;
-  font-weight: bold;
+  text-decoration: underline;
+  font-weight: 600;
 }
 
 #contact a:hover {
-  color: #00b894;
+  color: #ffc107; /* Helleres Gold beim Hover */
 }
 
 /* ========== Cookie-Banner ========== */
@@ -240,8 +269,6 @@ button[type="submit"]:hover {
   border-radius: 4px;
   cursor: pointer;
 }
-
-/* ========== Hintergrundbild-Overlay (nicht mehr nötig durch neues Body-Background) ========== */
 
 /* ========== AOS Fallback ========== */
 [data-aos] {
